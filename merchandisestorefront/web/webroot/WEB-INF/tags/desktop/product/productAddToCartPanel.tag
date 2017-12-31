@@ -38,8 +38,13 @@
 		</c:set>
 	</c:if>
 
+	<c:set var="days">&nbsp;day</c:set>
+	<c:if test="${product.productGoesOfflineIn gt 1}">
+		<c:set var="days">&nbsp;days</c:set>
+	</c:if>
+
 	<ycommerce:testId code="productDetails_productInStock_label">
-		<p class="stock_message">${productStockLevel}</p>
+		<p class="stock_message">${productStockLevel} for ${product.productGoesOfflineIn} ${days}</p>
 	</ycommerce:testId>
 </div>
 
