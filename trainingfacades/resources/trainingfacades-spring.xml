@@ -19,15 +19,6 @@
            http://www.springframework.org/schema/aop
            http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-	<bean id="offlineDateConverter" parent="abstractPopulatingConverter">
-		<property name="targetClass" value="de.hybris.platform.commercefacades.product.data.ProductData"/>
-			<property name="populators">
-				<list>
-					<ref bean="offlineDatePopulator"/>
-				</list>
-			</property>
-	</bean>
-
 	<bean id="offlineDatePopulator" class="org.training.product.populator.ProductGoesOfflinePopulator" >
 		<property name="modelService" ref="modelService"/>
 	</bean>
@@ -37,5 +28,22 @@
 		<property name="add" ref="offlineDatePopulator"/>
 	</bean>
 
+
+
+	<bean id="additionalDescriptionPopulator" class="org.training.product.populator.AdditionalDescriptionPopulator" >
+		<property name="modelService" ref="modelService"/>
+	</bean>
+
+    <bean id="trainingProductConfiguredPopulator" parent="accProductConfiguredPopulator">
+		<property name="populators">
+			<map key-type="de.hybris.platform.commercefacades.product.ProductOption" merge="true">
+				<entry key="ADDITIONAL_DESCRIPTION" value-ref="additionalDescriptionPopulator"/>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="trainingProductFacade" parent="accProductFacade">
+		<property name="productConfiguredPopulator" ref="trainingProductConfiguredPopulator"/>
+	</bean>
 			
 </beans>

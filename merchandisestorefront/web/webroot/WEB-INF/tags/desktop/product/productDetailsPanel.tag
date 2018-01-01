@@ -36,6 +36,10 @@
 			${product.summary}
 		</div>
 
+		<div class="summary">
+			${product.additionalDescription}
+		</div>
+
 		<product:productPromotionSection product="${product}"/>
 
 		<cms:pageSlot position="VariantSelector" var="component" element="div">

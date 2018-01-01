@@ -19,6 +19,11 @@
 
 	<bean class="de.hybris.platform.commercefacades.product.data.ProductData">
 		<property name="productGoesOfflineIn" type="String"/>
+		<property name="additionalDescription" type="String"/>
 	</bean>
+
+	<enum class="de.hybris.platform.commercefacades.product.ProductOption">
+		<value>ADDITIONAL_DESCRIPTION</value>
+	</enum>
 
 </beans>

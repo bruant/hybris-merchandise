@@ -16,11 +16,12 @@
    <extension abstractclassprefix="Generated" classprefix="Trainingfacades" managername="TrainingfacadesManager" managersuperclass="de.hybris.platform.jalo.extension.Extension" name="trainingfacades">
                
       <requires-extension name="merchandisefacades"/>
+      <requires-extension name="platformhmc"/>
       
-
       <coremodule generated="true" manager="org.training.jalo.TrainingfacadesManager" packageroot="org.training"/>
-	
 
+	  <hmcmodule extensionclassname="org.training.TrainingHmcExtension"/>
+	
    </extension>
       
 </extensioninfo>
