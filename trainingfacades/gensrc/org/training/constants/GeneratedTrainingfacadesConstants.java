@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Dec 31, 2017 2:26:44 PM                     ---
+ * --- Generated at Jan 1, 2018 6:48:17 AM                      ---
  * ----------------------------------------------------------------
  */
 package org.training.constants;
@@ -14,6 +14,13 @@ package org.training.constants;
 public class GeneratedTrainingfacadesConstants
 {
 	public static final String EXTENSIONNAME = "trainingfacades";
+	public static class Attributes
+	{
+		public static class Product
+		{
+			public static final String ADDITIONALDESCRIPTION = "additionalDescription".intern();
+		}
+	}
 	
 	protected GeneratedTrainingfacadesConstants()
 	{
